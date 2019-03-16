@@ -47,6 +47,10 @@ namespace MachineLearning
                 .Append(mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent(labelColumnName: "Label", featureColumnName: "Features"))
                 .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
 
+
+            // Train the model
+            var model = pipeline.Fit(trainingDataView);
+
         }
     }
 }
