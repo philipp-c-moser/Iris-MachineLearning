@@ -20,6 +20,12 @@ namespace MachineLearning
             [LoadColumn(4)] public float Label;
         }
 
+        // Result returned from prediction operations
+        public class IrisPrediction
+        {
+            [ColumnName("PredictedLabel")] public string PredictedLabels;
+        }
+
 
 
         static void Main(string[] args)
