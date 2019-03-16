@@ -63,6 +63,9 @@ namespace MachineLearning
                 }
             );
 
+            Console.WriteLine($"Predicted flower: {prediction.PredictedLabels}");
+            Console.ReadLine();
+
         }
     }
 }
