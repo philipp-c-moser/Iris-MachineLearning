@@ -51,6 +51,18 @@ namespace MachineLearning
             // Train the model
             var model = pipeline.Fit(trainingDataView);
 
+
+            // Make a Prediction!
+            var prediction = model.CreatePredictionEngine<IrisData, IrisPrediction>(mlContext).Predict(
+                new IrisData()
+                {
+                    SepalLength = 3.3f,
+                    SepalWidth = 1.6f,
+                    PetalLength = 0.2f,
+                    PetalWidth = 5.1f,
+                }
+            );
+
         }
     }
 }
